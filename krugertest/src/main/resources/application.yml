@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: krugertest
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  sql:
+    init:
+      mode: always
+      continue-on-error: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/kruger
+    username: postgres
+    password: postgres
+    driverClassName: org.postgresql.Driver
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher 
+JWT:
+  secret: "x2952h6KuVfcEv6OPlwixsoBJoSa6YkO$"
+  expirationMinutes: 3
+server:
+  port: 8001
